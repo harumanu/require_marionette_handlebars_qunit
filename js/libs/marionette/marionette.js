@@ -7,16 +7,6 @@
 //
 // http://marionettejs.com
 
-
-/*!
- * Includes BabySitter
- * https://github.com/marionettejs/backbone.babysitter/
- *
- * Includes Wreqr
- * https://github.com/marionettejs/backbone.wreqr/
- */
-
-
 var Marionette = (function(global, Backbone, _){
     "use strict";
 

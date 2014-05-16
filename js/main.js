@@ -3,7 +3,9 @@ require.config({
         'jquery': 'libs/jquery/jquery',
         'underscore': 'libs/underscore/underscore',
         'backbone' : 'libs/backbone/backbone',
-        'marionette': 'libs/marionette/marionette.bundled',
+        'backbone.babysitter' : 'libs/backbone/backbone.babysitter',
+        'backbone.wreqr' : 'libs/backbone/backbone.wreqr',
+        'marionette': 'libs/marionette/marionette',
         'spin': 'libs/spin/spin',
         'handlebars': 'libs/handlebars/handlebars'
     },
@@ -11,12 +13,16 @@ require.config({
         'underscore': {
             exports: '_'
         },
-        'backbone': {
-            deps: ['jquery', 'underscore'],
-            exports: 'Backbone'
-        },
-        'mariontte': {
+        'backbone.wreqr': {
             deps: ['backbone'],
+            exports: 'Backbone.Wreqr'
+        },
+        'backbone.babysitter': {
+            deps: ['backbone'],
+            exports: 'Backbone.ChildViewContainer'
+        },
+        'marionette': {
+            deps: ['backbone', 'backbone.babysitter', 'backbone.wreqr'],
             exports: 'Marionette'
         },
         'handlebars': {
